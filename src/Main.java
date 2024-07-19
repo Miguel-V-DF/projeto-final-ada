@@ -41,10 +41,13 @@ public class Main {
             double salarioBruto = salariosBruto[i];
             double inss = descontoINSS(salarioBruto);
             double impostoRenda = aliquotaIR(salarioBruto);
+            double salarioLiquido = salariosBruto[i] - inss - impostoRenda;
 
             System.out.printf("O salário bruto do(a) %dº funcionário(a) é: R$%.2f %n", (i + 1), salarioBruto);
             System.out.printf("A contribuição ao INSS do(a) %dº funcionário(a) será: R$%.2f %n", (i + 1), inss);
             System.out.printf("A contribuição ao Imposto de Renda do(a) %dº funcionário(a) será: R$%.2f %n", (i + 1), impostoRenda);
+            System.out.printf("O salário líquido do(a) %dº funcionário(a) será: R$%.2f %n", (i + 1), salarioLiquido);
+            System.out.println("--------------------------");
         }
     }
 
@@ -73,7 +76,4 @@ public class Main {
             return salarioPreIR * 0.275;
         }
     }
-
-
-
 }
