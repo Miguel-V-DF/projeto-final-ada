@@ -37,7 +37,7 @@ public class Main {
         scanner.close();
 
         for (int i = 0; i < 5; i++) {
-            System.out.printf("O salário bruto do(a) %dº funcionário(a) é : R$ %.2f %n", (i + 1), salarioBruto[i]);
+            System.out.printf("O salário bruto do(a) %dº funcionário(a) é: R$%.2f %n", (i + 1), salarioBruto[i]);
         }
     }
 
