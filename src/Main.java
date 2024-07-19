@@ -40,9 +40,11 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             double salarioBruto = salariosBruto[i];
             double inss = descontoINSS(salarioBruto);
+            double impostoRenda = aliquotaIR(salarioBruto);
 
             System.out.printf("O salário bruto do(a) %dº funcionário(a) é: R$%.2f %n", (i + 1), salarioBruto);
-            System.out.printf("A contribuição ao INSS do %dº funcionário(a) será: R$%.2f %n", (i + 1), inss);
+            System.out.printf("A contribuição ao INSS do(a) %dº funcionário(a) será: R$%.2f %n", (i + 1), inss);
+            System.out.printf("A contribuição ao Imposto de Renda do(a) %dº funcionário(a) será: R$%.2f %n", (i + 1), impostoRenda);
         }
     }
 
@@ -57,5 +59,21 @@ public class Main {
             return salarioPreINSS * 0.14;
         }
     }
+
+    public static double aliquotaIR(double salarioPreIR) {
+        if (salarioPreIR <= 1903.98) {
+            return salarioPreIR * 0;
+        } else if (salarioPreIR <= 2826.65) {
+            return salarioPreIR * 0.075;
+        } else if (salarioPreIR <= 3751.05) {
+            return salarioPreIR * 0.15;
+        } else if (salarioPreIR <= 4664.68) {
+            return salarioPreIR * 0.225;
+        } else {
+            return salarioPreIR * 0.275;
+        }
+    }
+
+
 
 }
