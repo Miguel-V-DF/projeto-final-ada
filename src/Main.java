@@ -30,16 +30,15 @@ public class Main {
         double[] salarioBruto = new double[5];
 
         for (int i = 0; i < 5; i++) {
-            System.out.print("Digite o salário dos cinco funcionários " + (i+1) + ": ");
+            System.out.print("Digite o salário do(a) " + (i + 1) + "º funcionário(a): ");
             salarioBruto[i] = scanner.nextDouble();
         }
 
-
-
-
-
         scanner.close();
 
-
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("O salário bruto do(a) %dº funcionário(a) é : R$ %.2f %n", (i + 1), salarioBruto[i]);
+        }
     }
+
 }
