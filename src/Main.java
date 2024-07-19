@@ -27,7 +27,7 @@ public class Main {
         }
     }
 
-    public static double descontoINSS(double salarioPreINSS) {
+    private static double descontoINSS(double salarioPreINSS) {
         if (salarioPreINSS <= 1212.00) {
             return salarioPreINSS * 0.075;
         } else if (salarioPreINSS <= 2427.35) {
@@ -39,7 +39,7 @@ public class Main {
         }
     }
 
-    public static double aliquotaIR(double salarioPreIR) {
+    private static double aliquotaIR(double salarioPreIR) {
         if (salarioPreIR <= 1903.98) {
             return salarioPreIR * 0;
         } else if (salarioPreIR <= 2826.65) {
